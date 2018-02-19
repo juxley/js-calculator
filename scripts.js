@@ -10,10 +10,13 @@ let op = "";
 let num1 = "";
 let num2 = "";
 
-for (var i = 0; i < nums.length; i++) {
+for (var i = 1; i < nums.length; i++) {
   nums[i].onclick = getNum;
-  nums[i].onmouseover = hoverEffect;
-  nums[i].onmouseout = hoverEffect2;
+  console.log(nums[i]);
+  // if (+nums[i].innerHTML >= 0) {
+    nums[i].onmouseover = hoverBtn;
+    nums[i].onmouseout = hoverBtn2;
+  
 }
 
 enter.onclick = equals;
@@ -30,11 +33,11 @@ function clear() {
   input.innerHTML = "";
 }
 
-function hoverEffect() {
+function hoverBtn() {
   this.style.backgroundColor='#ffc800';
 }
 
-function hoverEffect2() {
+function hoverBtn2() {
   this.style.backgroundColor='#f7de30';
 }
 
