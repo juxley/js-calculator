@@ -41,3 +41,49 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* CSS Starts Here */
+/* html {
+	background-color: #FFF5F
+} */
+
+body {
+	max-width: 850px;
+	background-color: #a71414;
+	position: relative;
+	margin: auto;
+	text-align: center;
+}
+
+h1 {
+	font-size: 32px;
+	text-align: center;
+	margin: 10px;
+	color: white;
+}
+
+table {
+	background: white;
+	position: relative;
+	margin: auto;
+}
+
+#input {
+	background: #FFF5F5;
+}
+
+td {
+	margin: auto;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+  background: #f7de30;
+	font-size: 21px;
+}
+
+.screen {
+	background-color: white;
+	max-width: 100px;
+	position: relative;
+	margin: auto;
+}
