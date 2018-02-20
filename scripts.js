@@ -12,11 +12,10 @@ let num2 = "";
 
 for (var i = 1; i < nums.length; i++) {
   nums[i].onclick = getNum;
-  console.log(nums[i]);
   // if (+nums[i].innerHTML >= 0) {
     nums[i].onmouseover = hoverBtn;
     nums[i].onmouseout = hoverBtn2;
-  
+
 }
 
 enter.onclick = equals;
@@ -24,6 +23,78 @@ c.onclick = clear;
 swap.onclick = swapped;
 delFunc.onclick = del;
 
+window.addEventListener('keydown', typeNum);
+function typeNum(e) {
+    switch (e.keyCode) {
+      case 8:
+        del();
+        break;
+      case 13:
+        equals();
+        break;
+      case 16:
+        flag = true;
+        break;
+      case 48:
+        input.innerHTML += "0";
+        break;
+      case 49:
+        input.innerHTML += "1";
+        break;
+      case 50:
+        input.innerHTML += "2";
+        break;
+      case 51:
+        input.innerHTML += "3";
+        break;
+      case 52:
+        input.innerHTML += "4";
+        break;
+      case 53:
+        if (flag) {
+        input.innerHTML += "%";
+        flag = false;
+        } else {
+        input.innerHTML += "5";
+       }
+        break;
+      case 54:
+        input.innerHTML += "6";
+        break;
+      case 55:
+        input.innerHTML += "7";
+        break;
+      case 56:
+        if(flag) {
+          input.innerHTML += "*";
+          flag = false;
+        } else {
+          input.innerHTML += "8";
+        }
+        break;
+      case 57:
+        input.innerHTML += "9";
+        break;
+      case 187:
+       if(flag) {
+         input.innerHTML += "+";
+         flag = false;
+         break;
+       } else {
+         equals();
+       }
+       break;
+      case 189:
+       input.innerHTML += "-";
+       break;
+      case 190:
+        input.innerHTML += ".";
+        break;
+      case 191:
+       input.innerHTML += "/";
+       break;
+  }
+}
 
 function getNum() {
   input.innerHTML += this.innerHTML;
